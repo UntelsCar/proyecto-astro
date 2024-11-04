@@ -1,4 +1,6 @@
 ---
+import { isTemplateExpression } from 'typescript';
+
 // le nav es el nombre de la varible que estamos cerando
 type Props = {
     nav:{
@@ -9,10 +11,10 @@ type Props = {
 const {nav} = Astro.props
 ---
 
-<div class="menu">
-{
-    nav.map((item)=> <li><a href={item.url}>{item.name}</a><li/>)
-}
+<div>
+    {nav.map((item) => (
+        <a href={item.url}>{item.name}</a>
+    ))}
 </div>
 
 <style>
