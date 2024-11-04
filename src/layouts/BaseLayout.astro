@@ -1,0 +1,33 @@
+---
+import Menu from "../componentes/Menu.astro"
+const dataMenu = [
+    {
+        name:"Home",
+        url:"/"
+    },
+    {
+        name:"laptos",
+        url:"/productos/laptop"
+    },
+    {
+        name:"Nosotros",
+        url:"/nosotros"
+    }
+]
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+        <Menu nav={dataMenu}/>
+        
+		<slot/>
+    
+	</body>
+</html>

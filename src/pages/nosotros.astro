@@ -1,0 +1,20 @@
+---
+const name= "carlos";
+const multiplicacion = Math.random()*4
+import BaseLayout from "../layouts/BaseLayout.astro"
+
+---
+
+<BaseLayout>
+    <h1>Estas con {name}</h1>
+    <h2 id="name"></h2>
+    <h2>multiplicando papu: {multiplicacion}</h2>
+</BaseLayout>
+
+
+<!-- <script>
+    const fill=document.getElementById("name");
+    if (fill){
+        fill?.innerHTML = "carlos"
+        }
+</script> -->

@@ -1,0 +1,30 @@
+---
+// le nav es el nombre de la varible que estamos cerando
+type Props = {
+    nav:{
+        url: string;
+        name:string;
+    }[]
+}
+const {nav} = Astro.props
+---
+
+<div class="menu">
+{
+    nav.map((item)=> <a href={item.url}>{item.name}</a>)
+}
+</div>
+
+<style>
+.menu{
+    display: flex;
+    gap: 16px
+}
+</style>
+
+
+<!-- <div>
+    <a href="/">Home</a> <br>
+    <a href="/productos/laptop">laptop</a>
+    <a href="/nosotros">Nosotros</a>
+</div> -->
