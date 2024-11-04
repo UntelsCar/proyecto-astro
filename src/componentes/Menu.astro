@@ -11,7 +11,7 @@ const {nav} = Astro.props
 
 <div class="menu">
 {
-    nav.map((item)=> <a href={item.url}>{item.name}</a>)
+    nav.map((item)=> <li><a href={item.url}>{item.name}</a><li/>)
 }
 </div>
 

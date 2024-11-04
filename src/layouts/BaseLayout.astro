@@ -25,9 +25,58 @@ const dataMenu = [
 		<title>Astro</title>
 	</head>
 	<body>
-        <Menu nav={dataMenu}/>
         
+        <header>
+            <div class="logo">Mi Logo</div>
+            <nav>
+                <ul>
+                    <Menu nav={dataMenu}/>
+                </ul>
+            </nav>
+        </header>
 		<slot/>
-    
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-image: url('../../../public/fondito.jpg');
+                color: white;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            nav ul li {
+                margin: 0 15px;
+            }
+            main {
+                padding: 20px;
+            }
+            .servicios, .testimonios {
+                margin: 20px 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .servicio, .testimonio {
+                border: 1px solid #ddd;
+                padding: 15px;
+                flex: 1 1 calc(33% - 20px); /* 3 columnas */
+            }
+            footer {
+                background-color: #f1f1f1;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
 	</body>
 </html>
